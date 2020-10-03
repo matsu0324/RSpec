@@ -8,10 +8,12 @@ RSpec.describe Post, type: :model do
       @post.content = "今日も晴れです。"
       @post.save
     end
+
     it "全て入力してあるので保存される" do
       expect(@post).to be_valid
     end
   end
+
   context "データが正しく保存されない" do
     before do
       @post = Post.new
@@ -19,6 +21,7 @@ RSpec.describe Post, type: :model do
       @post.content = "今日も晴れです。"
       @post.save
     end
+
     it "titleが入力されていないので保存されない" do
       expect(@post).to be_valid
       expect(@post.errors[:title]).to include("can't be blank")
