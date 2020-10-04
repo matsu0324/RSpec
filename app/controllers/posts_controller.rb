@@ -3,4 +3,6 @@ class PostsController < ApplicationController
     puts "作成したキー #{ENV['SECRET_KEY']}"
     @post = Post.new
   end
+  def create
+  end
 end
