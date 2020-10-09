@@ -10,7 +10,6 @@ Post.create!(
   title: 'railsを学ぼう',
   content: 'seedファイルについて'
   )
-
 10.times do |number|
   Post.create!(title: 'timesを学習しよう',content: number)
 end
